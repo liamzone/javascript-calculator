@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body onkeypress="handleKeyboard(this.KeyboardEvent.key)">
+    <h1 class="title">Calculator</h1>
+    <div class="calculator">
+      <p id="screen" class="screen">0</p>
+
+      <div class="keypad">
+        <button class="button" value="1" onclick="handleInput(this.value)">
+          1
+        </button>
+        <button class="button" value="2" onclick="handleInput(this.value)">
+          2
+        </button>
+        <button class="button" value="3" onclick="handleInput(this.value)">
+          3
+        </button>
+        <button class="button" value="4" onclick="handleInput(this.value)">
+          4
+        </button>
+        <button class="button" value="5" onclick="handleInput(this.value)">
+          5
+        </button>
+        <button class="button" value="6" onclick="handleInput(this.value)">
+          6
+        </button>
+        <button class="button" value="7" onclick="handleInput(this.value)">
+          7
+        </button>
+        <button class="button" value="8" onclick="handleInput(this.value)">
+          8
+        </button>
+        <button class="button" value="9" onclick="handleInput(this.value)">
+          9
+        </button>
+        <button class="button" value="0" onclick="handleInput(this.value)">
+          0
+        </button>
+        <button class="button" value="." onclick="handleInput(this.value)">
+          .
+        </button>
+        <button
+          class="button operate"
+          value="+"
+          onclick="handleOperator(this.value)"
+        >
+          +
+        </button>
+        <button
+          class="button operate"
+          value="-"
+          onclick="handleOperator(this.value)"
+        >
+          -
+        </button>
+        <button
+          class="button operate"
+          value="*"
+          onclick="handleOperator(this.value)"
+        >
+          *
+        </button>
+        <button
+          class="button operate"
+          value="/"
+          onclick="handleOperator(this.value)"
+        >
+          /
+        </button>
+      </div>
+      <button class="button functional" onclick="calculate()">Calculate</button>
+      <button class="button functional" onclick="clearScreen()">Clear</button>
+    </div>
+  </body>
+</html>
